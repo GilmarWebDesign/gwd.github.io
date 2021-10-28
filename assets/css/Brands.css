@@ -1,0 +1,21 @@
+.card {
+  box-shadow: 1px 1px 10px;
+  border-radius: 8px;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #politica {
+    color: #12c3ea;
+  }
+}
+
+@media (max-width: 768px) {
+  #termos {
+    color: #12c3ea;
+  }
+}
+
