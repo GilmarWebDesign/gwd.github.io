@@ -146,36 +146,24 @@
                 <div class="sent-message">Mensagem enviada. Obrigado!</div>
               </div>
               <div class="text-center"><button type="submit">Enviar</button></div>
-            </form>--><h1>Mudei</h1>
-            <script src="https://smtpjs.com/v3/smtp.js"></script> 
-<script type="text/javascript"> 
-	function sendEmail() { 
-	Email.send({ 
-		Host: "smtp.gmail.com", 
-		Username: "sender@email_address.com", 
-		Password: "Enter your password", 
-		To: 'receiver@email_address.com', 
-		From: "sender@email_address.com", 
-		Subject: "Sending Email using javascript", 
-		Body: "Well that was easy!!", 
-		Attachments: [ 
-		{ 
-			name: "File_Name_with_Extension", 
-			path: "Full Path of the file" 
-		}] 
-	}) 
-		.then(function (message) { 
-		alert("Mail has been sent successfully") 
-		}); 
-	} 
-</script> 
-</head> 
-
-<body> 
-<form method="post"> 
-	<input type="button" value="Send Mail"
-		onclick="sendMail()" /> 
-</form> 
+            </form>-->
+            <form id="formcontact" data-bss-recipient="d5c1424217e793db12cc8eb8126b60aa" data-bss-loading-message="Enviando..." data-bss-success-title="Sucesso" data-bss-success-message="Sua mensagem foi enviada." data-bss-error-title="Oops.." data-bss-error-message="Algo deu errado, tente novamente mais tarde." data-bss-filesize-message="O tamanho total deve ser inferior a 10 megabytes." data-bss-empty-form-message="Por favor, preencha os campos obrigatórios e tente novamente." data-bss-close="Fechar.">
+              <div class="row" style="margin-top: 30px;">
+                  <div class="col-lg-6 col-xl-6">
+                      <div class="form-group mb-3"><input class="form-control" type="text" placeholder="Nome" name="name" required=""></div>
+                      <div class="form-group mb-3"><input class="form-control" type="email" placeholder="Email" name="email" required=""></div>
+                      <div class="form-group mb-3"><input class="form-control" type="text" placeholder="Assunto" name="assunto" required=""></div>
+                  </div>
+                  <div class="col-lg-6 col-xl-6">
+                      <div class="form-group mb-3"><textarea class="form-control" placeholder="Mensagem" name="mensagem" rows="5" style="height: 155px;" required=""></textarea></div>
+                  </div>
+                  <div class="col">
+                      <div class="form-group mb-3">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" name="aceite" value="Declaro que li e aceito a política de privacidade e os termos de serviço." required=""><label class="form-check-label" for="formCheck-1" style="color: var(--bs-white);">Declaro que li e aceito a&nbsp;<a id="politica" href="politica-de-privacidade.html">política de privacidade</a>&nbsp;e os <a id="termos" href="termos-de-servico.html">termos de serviço</a>.</label></div>
+                      </div>
+                  </div>
+              </div><button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-bottom: 10px;">Enviar</button>
+          </form>
 
           </div>
 
@@ -281,6 +269,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/smart-forms.min.js"></script>
 
 </body>
 
