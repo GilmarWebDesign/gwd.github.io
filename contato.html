@@ -124,19 +124,29 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-            <form class="php-email-form" data-bss-recipient="dc2b4bbeb87017a80b2436aadb962eb5" data-bss-loading-message="Enviando..." data-bss-success-title="Sucesso" data-bss-success-message="Sua mensagem foi enviada." data-bss-error-title="Oops.." data-bss-error-message="Algo deu errado, tente novamente mais tarde." data-bss-filesize-message="O tamanho total deve ser inferior a 10 megabytes." data-bss-empty-form-message="Por favor, preencha os campos obrigatórios e tente novamente." data-bss-close="Fechar." role="form">
-              <input class="form-control form-group mb-3" type="text" id="name" name="name" placeholder="Nome" required="">
-              <input class="form-control form-group mb-3" type="email" id="email" placeholder="Email" name="email" required="">
-              <input class="form-control form-group mb-3" type="text" id="subject" placeholder="Assunto" name="subject" required="">
-              <textarea class="form-control form-group mb-3" id="message" placeholder="Mensagem" name="message" rows="5" style="height: 155px;" required=""></textarea>
-              <div class="form-check d-xxl-flex align-items-xxl-center form-group mb-3">
-                <input id="privacy-policy" type="checkbox" name="privacy" value="accept" required>
-                <label class="form-check-label ps-1" for="privacy-policy">
-                  Declaro que li e aceito a <a id="politica" href="politica-de-privacidade.html" >política de privacidade</a> e os <a id="termos" href="termos-de-servico.html">termos de serviço</a>.
-                </label>
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
               </div>
-              <button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-bottom: 10px;">Enviar</button>
-          </form>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Enviando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Mensagem enviada. Obrigado!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
 
           </div>
 
@@ -189,7 +199,7 @@
               <ul>
                 <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-site.html">Criação de sites</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-blogs.html">Criação de blogs</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-landing-pages.html">Criação de landing page</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-landing-pages.html">Criação de loading page</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-marca-digital.html">Criação de marca digital</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="criacao-de-perfis-sociais.html">Perfis de redes Sociais</a></li>
               </ul>
@@ -242,7 +252,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/smart-forms.min.js"></script>
 
 </body>
 
